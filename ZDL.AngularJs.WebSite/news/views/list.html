@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="newsList">
+    <h2>{{title}}</h2>
+    <table class="table table-hover">
+        <tr ng-repeat="item in mainList"><td>{{item.NewsId}}</td><td><img src="{{item.NewsImg}}" width="100px" height="50px"/></td><td>{{item.Title}}</td><td>{{item.AddTime | date:"MM/dd/yyyy"}}</td><td><a href="javascript:;" ng-click="edit(item)">编辑</a></td><td><a href="javascript:;" ng-click="del($index)">删除</a></td></tr>
+    </table>
+    <a href="#/add">添加</a>
+</div>
+
+</body>
+</html>

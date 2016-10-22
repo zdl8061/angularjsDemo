@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html ng-app="newsApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/require.js/2.1.20/require.min.js"></script>
+    <script src="//cdn.bootcss.com/angular.js/1.4.4/angular.min.js"></script>
+    <script src="//cdn.bootcss.com/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="http://chieffancypants.github.io/angular-loading-bar/src/loading-bar.js"></script>
+    <link href='http://chieffancypants.github.io/angular-loading-bar/src/loading-bar.css' rel='stylesheet' />
+</head>
+<body>
+
+<div data-ui-view="" class="container"></div>
+
+<script>
+
+    var app = angular.module("newsApp", ['ui.router', 'chieffancypants.loadingBar']);
+
+    app.config(function($controllerProvider, $compileProvider, $filterProvider, $provide) {
+        app.register = {
+            controller: $controllerProvider.register,
+            directive: $compileProvider.directive,
+            filter: $filterProvider.register,
+            factory: $provide.factory,
+            service: $provide.service
+        };
+    });
+
+    app.config(function($stateProvider, $urlRouterProvider) {
+
+        $urlRouterProvider.when("", "/list");
+        $stateProvider
+            .state("list", {
+                url: "/:page",
+                templateUrl: function($match) {
+                    var page = $match.page;
+                    return "/news/views/" + page + ".html";
+                },
+                resolve: {
+                    load: function($q, $rootScope, $stateParams) {
+                        var deferred = $q.defer();
+                        var dependencies = '/news/controllers/' + $stateParams.page + '.js';
+
+                        require([dependencies], function() {
+
+                            $rootScope.$apply(function() {
+                                deferred.resolve();
+                            });
+                        });
+
+                        return deferred.promise;
+                    }
+                }
+            });
+    });
+
+</script>
+</body>
+</html>

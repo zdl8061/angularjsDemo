@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ZDL.AngularJs.WebSite", "http://localhost:51837", "{91F52DA8-F80C-4E28-A1B0-AEA56C819DD0}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{864263aa-7d6e-420c-91c8-5a0d98048a93}|ZDL.AngularJs.Code.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51837"
+		Debug.AspNetCompiler.PhysicalPath = "ZDL.AngularJs.WebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51837\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51837"
+		Release.AspNetCompiler.PhysicalPath = "ZDL.AngularJs.WebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51837\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "ZDL.AngularJs.WebSite\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZDL.AngularJs.Code", "ZDL.AngularJs.Code\ZDL.AngularJs.Code.csproj", "{864263AA-7D6E-420C-91C8-5A0D98048A93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91F52DA8-F80C-4E28-A1B0-AEA56C819DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F52DA8-F80C-4E28-A1B0-AEA56C819DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F52DA8-F80C-4E28-A1B0-AEA56C819DD0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F52DA8-F80C-4E28-A1B0-AEA56C819DD0}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{864263AA-7D6E-420C-91C8-5A0D98048A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{864263AA-7D6E-420C-91C8-5A0D98048A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{864263AA-7D6E-420C-91C8-5A0D98048A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{864263AA-7D6E-420C-91C8-5A0D98048A93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
